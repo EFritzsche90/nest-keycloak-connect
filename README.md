@@ -14,22 +14,16 @@
 - Simply add `@Resource`, `@Scopes`, or `@Roles` in your controllers and you're good to go.
 - Compatible with [Fastify](https://github.com/fastify/fastify) platform.
 
-###Custom
+### Custom
 
 - Add custom keycloak-connect to fix issuer problem in docker network
 
 ## Installation
 
-### Yarn
-
-```bash
-yarn add nest-keycloak-connect
-```
-
 ### NPM
 
 ```bash
-npm install nest-keycloak-connect --save
+npm install @ef-company/nest-keycloak-connect --save
 ```
 
 ## Getting Started
@@ -44,7 +38,7 @@ import {
   ResourceGuard,
   RoleGuard,
   AuthGuard,
-} from 'nest-keycloak-connect';
+} from '@ef-company/nest-keycloak-connect';
 
 @Module({
   imports: [
