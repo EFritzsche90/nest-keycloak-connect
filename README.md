@@ -14,6 +14,10 @@
 - Simply add `@Resource`, `@Scopes`, or `@Roles` in your controllers and you're good to go.
 - Compatible with [Fastify](https://github.com/fastify/fastify) platform.
 
+###Custom
+
+- Add custom keycloak-connect to fix issuer problem in docker network
+
 ## Installation
 
 ### Yarn
