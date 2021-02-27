@@ -6,7 +6,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
-import * as KeycloakConnect from 'keycloak-connect';
+import * as KeycloakConnect from '@ef-company/keycloak-connect';
 import { extractRequest } from '../util';
 import { KEYCLOAK_INSTANCE } from '../constants';
 import { META_ALLOW_ANY_ROLE } from '../decorators/allow-any-role.decorator';
