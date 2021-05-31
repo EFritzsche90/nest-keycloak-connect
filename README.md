@@ -17,6 +17,7 @@
 ### Custom
 
 - Add custom keycloak-connect to fix issuer problem in docker network
+- Use nestjs logger
 
 ## Installation
 

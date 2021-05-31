@@ -2,7 +2,7 @@ import {
   CanActivate,
   ExecutionContext,
   Inject,
-  Injectable,
+  Injectable, Logger,
   UnauthorizedException,
 } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
@@ -21,6 +21,9 @@ import { extractRequest } from '../util';
  */
 @Injectable()
 export class AuthGuard implements CanActivate {
+
+  private logger = new Logger(AuthGuard.name);
+
   constructor(
     @Inject(KEYCLOAK_INSTANCE)
     private keycloak: KeycloakConnect.Keycloak,
@@ -67,7 +70,7 @@ export class AuthGuard implements CanActivate {
         return true;
       }
     } catch (ex) {
-      console.error(`Cannot validate access token: `, ex);
+      this.logger.error(`Cannot validate access token: `, ex);
     }
 
     throw new UnauthorizedException();
